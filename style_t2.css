@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.5em;
+    line-height: 1.6;
+    color: #0e1a6a;
+    background: url('bg.png') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+header {
+    background: #0b0b2c;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.hero-section {
+    display: flex;
+    color: #000000;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.cta-button {
+    background: #0e0e73;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.about-section,.services-section, .contact-section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(11, 15, 120, 0.2);
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 2s ease-out, transform 1s ease-out; 
+
+}
+
+.about-section h2, .services-section h2, .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0a0e39;
+}
+
+.service {
+    margin: 2rem 0;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section form label {
+    margin: 0.5rem 0;
+    
+}
+
+.contact-section form input, .contact-section form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #100f0f;
+    border-radius: 5px;
+}
+
+.contact-section form button {
+    background: #f4a261;
+    color: #010101;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.fade-in.show {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+.content-section {
+    padding: 4rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: #0e1a6a;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.content-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #0b0b2c;
+    text-align: center;
+}
+
+.content-section ul {
+    margin-left: 2rem;
+    list-style-type: square;
+}
+
+.content-section ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.content-section p {
+    margin-bottom: 1.5rem;
+}
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.project-images img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-images figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    font-style: italic;
+}
+.testimonial {
+    margin: 2rem auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-style: italic;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #0e1a6a;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}

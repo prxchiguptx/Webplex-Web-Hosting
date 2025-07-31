@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style_t2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.jpg" class="logo-img">
+                <span>WEBPLEX</span>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to WebPlex</h1>
+            <p>Your success starts here. Let's build something amazing together.</p><br><br>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section fade-in">
+        <h2>About Us</h2>
+        <p>We are a team of passionate individuals committed to delivering the best solutions for our clients. Our expertise spans across various domains and industries.</p>
+    </section><br><br>
+
+    <section id="services" class="services-section fade-in">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3><a href="web-development.html">Web Development</a></h3>
+            <p>We build responsive and high-quality websites.</p>
+        </div>
+        <div class="service">
+            <h3><a href="seo-optimization.html">SEO Optimization</a></h3>
+            <p>Improve your site's visibility on search engines.</p>
+        </div>
+        <div class="service">
+            <h3><a href="digital-marketing.html">Digital Marketing</a></h3>
+            <p>Reach your audience effectively through digital channels.</p>
+        </div>
+    </section><br><br>
+
+    <section id="contact" class="contact-section fade-in">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label>
+                Your email:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Your message:
+                <textarea name="message" required></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 WebPlex. All rights reserved.</p>
+    </footer>
+
+    <script src="script_t2.js"></script>
+
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const email = this.email.value;
+        const message = this.message.value;
+
+        const response = await fetch('/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, message })
+        });
+
+        if (response.ok) {
+            alert('Message sent successfully!');
+            this.reset();
+        } else {
+            alert('Failed to send message.');
+        }
+    });
+    </script>
+</body>
+</html>
